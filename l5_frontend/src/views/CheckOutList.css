@@ -1,0 +1,62 @@
+/* Stylizacja tabeli */
+table {
+    width: 80%;
+    margin: 0 auto;
+    /* Wyśrodkowanie tabeli na stronie */
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #0ae7e7;
+}
+
+/* Stylizacja przycisków */
+button {
+    background-color: #008CBA;
+    color: white;
+    border: 1px solid #000000;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Stylizacja przycisku Usun */
+button.delete-button {
+    background-color: #ff0000;
+    /* Czerwony kolor */
+    color: white;
+    /* biały kolor */
+    border: 1px solid #000000;
+    /* Dodanie obramowania */
+}
+
+/* Stylizacja przycisku Edytuj */
+button.edit-button {
+    background-color: rgb(255, 121, 4);
+    /* Biały kolor */
+    color: white;
+    /* Czarny kolor */
+    border: 1px solid #000000;
+    /* Dodanie obramowania */
+}
+
+/* Stylizacja przycisku Zapisz */
+button.save-button {
+    background-color: rgb(37, 246, 37);
+    /* Biały kolor */
+    color: #000000;
+    /* Czarny kolor */
+    border: 1px solid #000000;
+    /* Dodanie obramowania */
+}
+
+
+button:hover {
+    background-color: #005f7f;
+}
