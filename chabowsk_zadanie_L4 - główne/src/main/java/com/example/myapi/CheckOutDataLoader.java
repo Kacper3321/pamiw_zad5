@@ -17,7 +17,7 @@ public class CheckOutDataLoader {
     @Autowired
     private BookRepository bookRepository;
 
-    private final Faker faker = new Faker(new Random(42));
+    private final Faker faker = new Faker(new Random(72));
 
     @PostConstruct
     private void loadData() {

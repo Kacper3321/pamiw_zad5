@@ -14,13 +14,13 @@ public class BookDataLoader {
     @Autowired
     private BookRepository bookRepository;
 
-    private final Faker faker = new Faker(new Random(42)); // Ustaw stałe ziarno dla powtarzalności
+    private final Faker faker = new Faker(new Random(72)); // Ustaw stałe ziarno dla powtarzalności
 
     @PostConstruct
     private void loadData() {
         // Tworzenie danych testowych
         if (bookRepository.count() == 0) {
-            for (int i = 0; i < 100; i++) {
+            for (int i = 0; i < 20; i++) {
                 Book book = new Book();
                 // Używaj metody faker do generowania danych
                 String title = faker.book().title();

@@ -74,8 +74,8 @@ button.edit-button:hover {
     background-color: #6fc3ff;
 }
 button.save-button:hover {
-     background-color: #22b604;
- }
+    background-color: #22b604;
+}
 
 button.cancel-button:hover {
     background-color: #1f5afd;
@@ -84,5 +84,3 @@ button.cancel-button:hover {
 button:hover {
     background-color: #05b783;
 }
-
-

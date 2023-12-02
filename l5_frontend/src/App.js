@@ -1,39 +1,20 @@
-import './App.css';
-import CheckOutList from './views/CheckOutList';
+//import './App.css';
 import React from 'react';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import CheckOutList from './views/CheckOutList';
+import BookList from './views/BookList';
+import Home from './views/Home';
 
-
-/*function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-  
-}*/
-
-class App extends React.Component {
-  render() {
-      return (
-          <div>
-              <h1>chabowsk L5 - implementacja MVC</h1>
-              <CheckOutList />
-          </div>
-      );
-  }
+function App() {
+    return (
+        <Router>
+            <Routes>
+                <Route path="/Books" Component={BookList}/>
+                <Route path="/CheckOuts" Component={CheckOutList}/>
+                <Route path="/" Component={Home}/>
+            </Routes>
+        </Router>
+    );
 }
 
 export default App;

@@ -46,6 +46,10 @@ public class CheckOutController {
 
     @PostMapping("${api.checkout.base.url}")
     public ResponseEntity<?> createCheckOut(@Valid @RequestBody CheckOutDTO checkOutDTO, BindingResult bindingResult) {
+        if(checkOutDTO.getReturnDays() < 0) {
+            String error = "Liczba dni na zwrot nie moze byc mniejsza niz 0";
+            return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
+        }
         if (bindingResult.hasErrors()) {
             List<String> errors = new ArrayList<>();
             for (FieldError error : bindingResult.getFieldErrors()) {
@@ -72,6 +76,12 @@ public class CheckOutController {
 
     @PutMapping("${api.checkout.by.id}")
     public ResponseEntity<?> updateCheckOut(@PathVariable Long id, @Valid @RequestBody CheckOutDTO checkOutDTO, BindingResult bindingResult) {
+
+        if(checkOutDTO.getReturnDays() < 0) {
+            String error = "Liczba dni na zwrot nie moze byc mniejsza niz 0";
+            return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
+        }
+
         if (bindingResult.hasErrors()) {
             List<String> errors = new ArrayList<>();
             for (FieldError error : bindingResult.getFieldErrors()) {
