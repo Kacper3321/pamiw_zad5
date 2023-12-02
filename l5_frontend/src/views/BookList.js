@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from '../config/axios-config'; // Zaimportuj odpowiednią bibliotekę do komunikacji z API
 import './BookList.css';
+import {Link} from "react-router-dom";
 
 class BookList extends Component {
     constructor() {
@@ -157,8 +158,11 @@ class BookList extends Component {
 
         return (
             <div>
+                <Link to="/">
+                    <button>Strona główna</button>
+                </Link>
                 <h1>
-                    <center>Lista Książek</center>
+                    <center>Lista Książek uzytkownika chabowsk</center>
                 </h1>
                 <table>
                     <thead>
